@@ -75,6 +75,7 @@ describe("My First Test", () => {
 
   xit("should show correct search results", () => {
     cy.visit("/");
+
     homepage.closeCookies();
     homepage.clickOnNav();
     homepage.clickNavResBtn();
