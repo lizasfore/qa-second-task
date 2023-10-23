@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: Cypress Tests
 on:
   push:
     branches: [main, master]
