@@ -7,7 +7,7 @@ import blogPage from "../../tests/pages/blogPage";
 import pricingPage from "../../tests/pages/pricingPage";
 
 describe("My First Test", () => {
-  xit("should not sign up with wrong email", () => {
+  it("should not sign up with wrong email", () => {
     cy.visit("/");
     homepage.clickOnSignUp();
     signUpPage.enterWrongEmail();
@@ -16,7 +16,7 @@ describe("My First Test", () => {
     signUpPage.checkEmailWarnMsg();
   });
 
-  xit("should not sign up with wrong first name", () => {
+  it("should not sign up with wrong first name", () => {
     cy.visit("/");
     homepage.clickOnSignUp();
     signUpPage.enterWrongFName();
@@ -25,7 +25,7 @@ describe("My First Test", () => {
     signUpPage.checkNameWarnMsg();
   });
 
-  xit("should not sign up with wrong last name", () => {
+  it("should not sign up with wrong last name", () => {
     cy.visit("/");
     homepage.clickOnSignUp();
     signUpPage.enterWrongLName();
@@ -34,7 +34,7 @@ describe("My First Test", () => {
     signUpPage.checkNameWarnMsg();
   });
 
-  xit("should not sign up with wrong password", () => {
+  it("should not sign up with wrong password", () => {
     cy.visit("/");
     homepage.clickOnSignUp();
     signUpPage.enterWrongPassword();
@@ -43,7 +43,7 @@ describe("My First Test", () => {
     signUpPage.checkPasswordWarnMsg();
   });
 
-  xit("should not sign up with terms and conditions unchecked", () => {
+  it("should not sign up with terms and conditions unchecked", () => {
     cy.visit("/");
     homepage.clickOnSignUp();
     signUpPage.uncheckedTermsBox();
@@ -51,7 +51,7 @@ describe("My First Test", () => {
     signUpPage.checkTermsWarnMsg();
   });
 
-  xit("url should contain voice API tags", () => {
+  it("url should contain voice API tags", () => {
     cy.visit("/");
     homepage.clickOnNav();
     homepage.closeCookies();
@@ -60,20 +60,20 @@ describe("My First Test", () => {
     voiceApiPage.checkUrlContainsVoice();
   });
 
-  xit("should redirect to the vacancy window", () => {
+  it("should redirect to the vacancy window", () => {
     cy.visit("/");
     homepage.clickOnCareersBtn();
     careersPages.clickOnVacancyListed();
     careersPages.checkCorrectRedirecting();
   });
 
-  xit("detail button should be clickable", () => {
+  it("detail button should be clickable", () => {
     cy.visit("/");
     homepage.clickOnVsLink();
     versusPage.checkBtnClickability();
   });
 
-  xit("should show correct search results", () => {
+  it("should show correct search results", () => {
     cy.visit("/");
     homepage.closeCookies();
     homepage.clickOnNav();
