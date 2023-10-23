@@ -3,7 +3,7 @@ class BlogPage {
     searchInput: () => cy.get("#search"),
 
     searchRes: () =>
-      cy.xpath("//li[contains(@class, 'c-buvHyO-iffuWOF-css')][4]"),
+      cy.xpath("//li[contains(@class, 'c-buvHyO-iffuWOF-css')][4]//h3"),
   };
 
   searchTheBlog() {
@@ -13,6 +13,7 @@ class BlogPage {
   }
 
   checkSerRes() {
+    cy.wait(5000);
     this.elements.searchRes().contains("AI");
   }
 }

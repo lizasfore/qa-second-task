@@ -9,6 +9,7 @@ import pricingPage from "../../tests/pages/pricingPage";
 describe("My First Test", () => {
   it("should not sign up with wrong email", () => {
     cy.visit("/");
+    homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongEmail();
     signUpPage.tickTermsAndConditions();
@@ -18,6 +19,7 @@ describe("My First Test", () => {
 
   it("should not sign up with wrong first name", () => {
     cy.visit("/");
+    homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongFName();
     signUpPage.tickTermsAndConditions();
@@ -27,6 +29,7 @@ describe("My First Test", () => {
 
   it("should not sign up with wrong last name", () => {
     cy.visit("/");
+    homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongLName();
     signUpPage.tickTermsAndConditions();
@@ -36,6 +39,7 @@ describe("My First Test", () => {
 
   it("should not sign up with wrong password", () => {
     cy.visit("/");
+    homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongPassword();
     signUpPage.tickTermsAndConditions();
@@ -45,6 +49,7 @@ describe("My First Test", () => {
 
   it("should not sign up with terms and conditions unchecked", () => {
     cy.visit("/");
+    homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.uncheckedTermsBox();
     signUpPage.clickSignUpBtn();
