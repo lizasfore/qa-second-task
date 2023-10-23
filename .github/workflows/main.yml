@@ -1,0 +1,16 @@
+name: learn-github-actions
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - name: Cypress.io
+        uses: cypress-io/github-action@v6.3.0
