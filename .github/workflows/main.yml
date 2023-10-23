@@ -5,12 +5,16 @@ on:
   pull_request:
     branches: [main, master]
 jobs:
-  check-bats-version:
+  cypress:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: "14"
-      - name: Cypress.io
-        uses: cypress-io/github-action@v6.3.0
+      - name: Install dependencies
+        run: npm install
+      - name: Run Cypress tests
+        run: npx cypress run --record --key 796e6256-793d-4144-8dce-653cd094c42c
+      - name: Upload Cypress Dashboard video and screenshots
+        run: npx cypress run --record --key 796e6256-793d-4144-8dce-653cd094c42c --parallel --ci-build-id ${{ github.run_id }}
