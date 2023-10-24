@@ -4,6 +4,7 @@
     "cypress-xpath": "^2.0.1"
   },
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cy:run:second": "cypress run --e2e --browser chrome --config-file cypress.second.config.js"
   }
 }
