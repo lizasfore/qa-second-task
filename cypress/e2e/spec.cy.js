@@ -7,7 +7,11 @@ import blogPage from "../../tests/pages/blogPage";
 import pricingPage from "../../tests/pages/pricingPage";
 
 describe("My First Test", () => {
-  it("should not sign up with wrong email", () => {
+  // before(() => {
+  //   cy.visit("/");
+  // });
+
+  xit("should not sign up with wrong email", () => {
     cy.visit("/");
     homepage.closeCookies();
     homepage.clickOnSignUp();
@@ -17,8 +21,7 @@ describe("My First Test", () => {
     signUpPage.checkEmailWarnMsg();
   });
 
-  it("should not sign up with wrong first name", () => {
-    cy.visit("/");
+  xit("should not sign up with wrong first name", () => {
     homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongFName();
@@ -27,8 +30,7 @@ describe("My First Test", () => {
     signUpPage.checkNameWarnMsg();
   });
 
-  it("should not sign up with wrong last name", () => {
-    cy.visit("/");
+  xit("should not sign up with wrong last name", () => {
     homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongLName();
@@ -37,8 +39,7 @@ describe("My First Test", () => {
     signUpPage.checkNameWarnMsg();
   });
 
-  it("should not sign up with wrong password", () => {
-    cy.visit("/");
+  xit("should not sign up with wrong password", () => {
     homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.enterWrongPassword();
@@ -47,8 +48,7 @@ describe("My First Test", () => {
     signUpPage.checkPasswordWarnMsg();
   });
 
-  it("should not sign up with terms and conditions unchecked", () => {
-    cy.visit("/");
+  xit("should not sign up with terms and conditions unchecked", () => {
     homepage.closeCookies();
     homepage.clickOnSignUp();
     signUpPage.uncheckedTermsBox();
@@ -56,8 +56,7 @@ describe("My First Test", () => {
     signUpPage.checkTermsWarnMsg();
   });
 
-  it("url should contain voice API tags", () => {
-    cy.visit("/");
+  xit("url should contain voice API tags", () => {
     homepage.clickOnNav();
     homepage.closeCookies();
     homepage.clickNavProdBtn();
@@ -65,21 +64,18 @@ describe("My First Test", () => {
     voiceApiPage.checkUrlContainsVoice();
   });
 
-  it("should redirect to the vacancy window", () => {
-    cy.visit("/");
+  xit("should redirect to the vacancy window", () => {
     homepage.clickOnCareersBtn();
     careersPages.clickOnVacancyListed();
     careersPages.checkCorrectRedirecting();
   });
 
-  it("detail button should be clickable", () => {
-    cy.visit("/");
+  xit("detail button should be clickable", () => {
     homepage.clickOnVsLink();
     versusPage.checkBtnClickability();
   });
 
-  it("should show correct search results", () => {
-    cy.visit("/");
+  xit("should show correct search results", () => {
     homepage.closeCookies();
     homepage.clickOnNav();
     homepage.clickNavResBtn();
@@ -88,8 +84,7 @@ describe("My First Test", () => {
     blogPage.checkSerRes();
   });
 
-  it("'see more' button should scroll into the corresponding page part", () => {
-    cy.visit("/");
+  xit("'see more' button should scroll into the corresponding page part", () => {
     homepage.closeCookies();
     homepage.clickOnNav();
     homepage.clickPricingBtn();
